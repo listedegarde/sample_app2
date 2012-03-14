@@ -5,7 +5,11 @@ describe Relationship do
   let(:follower) { FactoryGirl.create(:user) }
   let(:followed) { FactoryGirl.create(:user) }
   let(:relationship) do
+<<<<<<< HEAD
   	follower.relationships.build(followed_id: followed.id)
+=======
+    follower.relationships.build(followed_id: followed.id)
+>>>>>>> following-users
   end
 
   subject { relationship }
@@ -17,7 +21,11 @@ describe Relationship do
 
   	it { should respond_to(:follower) }
   	it { should respond_to(:followed) }
+<<<<<<< HEAD
   	its(:follower) { should == follower}
+=======
+  	its(:follower) { should == follower }
+>>>>>>> following-users
   	its(:followed) { should == followed }
   end
 
